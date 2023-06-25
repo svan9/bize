@@ -20,9 +20,9 @@ import { vec2 } from "./vector.js";
 import { snake } from "./snake.js";
 
 const worldis = {
-    0: "black",
-    1: "green",
-    2: "red",
+    0: "#0f1012",
+    1: "#2d530d",
+    2: "#963912",
 };
 
 var worldmap = new world(

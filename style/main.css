@@ -4,7 +4,7 @@
 }
 .gameover > .restart {
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #40708e;
     padding: 0.2rem 6rem;
     border-radius: 1rem;
     transition: 0.5s cubic-bezier(0, 0, 0, 1);
@@ -15,7 +15,7 @@
 }
 
 .gameover {
-    background-color: #ffffff4c;
+    background-color: #ffffff11;
     position: absolute;
     width: 500px;
     height: 500px;
@@ -27,6 +27,7 @@
     left: 0px;
     top: 0px;
     z-index: 2;
+    color: #ffffff;
 }
 .score {
     position: absolute;
@@ -67,6 +68,13 @@ canvas {
     margin: 0.1rem;
     border-radius: 1rem;
     width: 2rem;
-    /* background-color: #ccc; */
     text-align: center;
+    color: white;
+    user-select: none;
+}
+
+body {
+    background-color: #0f1012;
+    /* background-color: #2d530d;
+    background-color: #963912; */
 }
