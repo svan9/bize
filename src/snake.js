@@ -12,22 +12,22 @@ export class snake {
 
     key(e) {
         switch (e) {
-            case "a": // left
+            case "KeyA": // left
                 if (this.dirname == "right") break;
                 this.dir = vec2(-1, 0);
                 this.dirname = "left";
                 break;
-            case "d": // right
+            case "KeyD": // right
                 if (this.dirname == "left") break;
                 this.dir = vec2(1, 0);
                 this.dirname = "right";
                 break;
-            case "w": // up
+            case "KeyW": // up
                 if (this.dirname == "down") break;
                 this.dir = vec2(0, -1);
                 this.dirname = "up";
                 break;
-            case "s": // down
+            case "KeyS": // down
                 if (this.dirname == "up") break;
                 this.dir = vec2(0, 1);
                 this.dirname = "down";

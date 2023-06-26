@@ -3,7 +3,7 @@ const canvas = document.createElement("canvas"),
 
 document.querySelectorAll(".sk").forEach((e) =>
     e.addEventListener("click", function () {
-        simkey(this.getAttribute("src"));
+        simkey(document.body, this.getAttribute("src"));
     })
 );
 
@@ -31,9 +31,10 @@ var worldmap = new world(
     worldis
 );
 
-function simkey(key) {
-    const event = new KeyboardEvent("keydown", { key });
-    document.body.dispatchEvent(event);
+function simkey(node, key) {
+    const event = new KeyboardEvent("keydown", { key, code: "Key" + key });
+    node.dispatchEvent(event);
+    return event;
 }
 
 var snakee = new snake();
@@ -41,7 +42,7 @@ var snakee = new snake();
 document.body.addEventListener("keydown", KeyUpdate);
 
 function KeyUpdate(e) {
-    snakee.key(e.key.toLowerCase());
+    snakee.key(e.code);
 }
 
 function randrange(min, max) {
